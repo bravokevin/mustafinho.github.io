@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>The Music Kit</title>
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+</head>
+		
+<body>
+	<div class="container">
+
+		<div class="welcome_container">
+			<div class = "welcome_text">
+				<h1>Welcome to music kit</h1>
+			</div>
+		</div>
+
+		<div class ="instrument_container">
+			<div class ="instruments_text">
+				<h2>Select your instrument</h2>
+			</div>
+			<div class="instruments">
+				<div class = "instrument">
+					<div class = "logo">
+	                	<img src="img/drumstick.png" alt="">	
+					</div>
+					<div class = "subtitle">
+						<span> Batrery </span>
+					</div>
+				</div>
+				<div class = "instrument">
+					<div class = "logo">
+	                	<img src="img/guitar.png" alt="">	
+					</div>
+					<div class = "subtitle">
+						<span> Guitar </span>
+					</div>
+				</div>
+				<div class = "instrument">
+					<div class = "logo">
+	                	<img src="img/piano.png" alt="">	
+					</div>
+					<div class = "subtitle">
+						<span>Piano</span>
+					</div>
+				</div>
+				<div class = "instrument">
+				<div class = "logo">
+	                	<img src="img/bass-guitar.png" alt="">	
+				</div>
+					<div class = "subtitle">
+						<span> Bass </span>
+					</div>
+				</div>
+				<div class = "instrument">
+					<div class = "logo">
+	                	<img src="img/humor.png" style="width: 35px" alt="">	
+					</div>
+					<div class = "subtitle">
+						<span> Funny Sounds </span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class ="keys_container">
+		<h2>Press one of those keys</h2>
+		<div class="keys">
+				<div data-key = "65" class ="key">
+					<kbd>A</kbd>
+					<span class="sound">clap</span>
+				</div>
+				<div data-key = "83" class ="key">
+					<kbd>S</kbd>
+					<span class="sound">hihat</span>
+				</div>
+				<div data-key = "68" class ="key">
+					<kbd>D</kbd>
+					<span class="sound">kick</span>
+				</div>
+				<div data-key = "70" class ="key">
+					<kbd>F</kbd>
+					<span class="sound">openhat</span>
+				</div>
+				<div data-key = "71" class ="key">
+					<kbd>G</kbd>
+					<span class="sound">boom</span>
+				</div>
+				<div data-key = "72" class ="key">
+					<kbd>H</kbd>
+					<span class="sound">ride</span>
+				</div>
+				<div data-key = "74" class ="key">
+					<kbd>J</kbd>
+					<span class="sound">snare</span>
+				</div>
+				<div data-key = "75" class ="key">
+					<kbd>K</kbd>
+					<span class="sound">tom</span>
+				</div>
+				<div data-key = "76" class ="key">
+					<kbd>L</kbd>
+					<span class="sound">tink</span>
+				</div>		
+			</div>
+		</div>
+
+
+	</div>
+
+
+<!-- Battery sounds  -->
+	<audio id ="battery" data-key = "65" src ="sounds/battery/clap.wav"></audio>
+	<audio data-key = "83" src ="sounds/battery/hihat.wav"></audio>
+	<audio data-key = "68" src ="sounds/battery/kick.wav"></audio>
+	<audio data-key = "70" src ="sounds/battery/openhat.wav"></audio>
+	<audio data-key = "71" src ="sounds/battery/boom.wav"></audio>
+	<audio data-key = "72" src ="sounds/battery/ride.wav"></audio>
+	<audio data-key = "74" src ="sounds/battery/snare.wav"></audio>
+	<audio data-key = "75" src ="sounds/battery/tom.wav"></audio>
+	<audio data-key = "76" src ="sounds/battery/tink.wav"></audio>
+
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
