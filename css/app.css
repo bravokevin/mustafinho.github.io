@@ -1,10 +1,8 @@
 html {
-  	/*font-size: calc(10px + (20 - 10) * ((100vw - 768px) / (1600 - 780)));*/
 	/*background-image: url(../img/primary_bg.jpg);*/
 	background-size: cover;
 	font-size: 1.7vh;
-/*	font-family: "roboto", sans-serif;
-    margin: 0px;*/
+
 }
 body,
 html {
@@ -54,6 +52,8 @@ html {
   	border-color: #ffc600;
   	box-shadow: 0 0 1rem #ffc600;
 }
+
+
 }
 .subtitle{
 	align-items: flex-end;
@@ -96,6 +96,12 @@ kbd{
 .playing {
   transform: scale(1.1);
   border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+.test{
+	  transform: scale(2.1);
+  border-color: #89ad33;
   box-shadow: 0 0 1rem #ffc600;
 }
 

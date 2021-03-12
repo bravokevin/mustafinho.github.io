@@ -1,3 +1,4 @@
+
 const KEY = {
   'A': 65,
   'S': 83,
@@ -10,6 +11,13 @@ const KEY = {
   'L': 76,
 };
 
+const INSTRUMENTS = {
+	"Drumm" : "drumm",
+	"Guitar" : "guitar",
+	"Piano" : "piano",
+	"Bass" : "bass",
+	"Funny Sounds": "funny_sounds"
+}
 
 
 function removeTransition(e) {
@@ -29,6 +37,8 @@ function playSound(e) {
 function playSoundOnTouch(e) {
   const audio = document.querySelector(`audio[data-key="${KEY[e.path[0].innerText]}"]`);
   const key = document.querySelector(`div[data-key="${KEY[e.path[0].innerText]}"]`);
+    console.log(key, "sonidda", e.path)
+
   if (!audio) return;
 
   key.classList.add('playing');
@@ -43,3 +53,21 @@ keys.forEach((key) => {
   key.addEventListener('click', playSoundOnTouch);
 });
 window.addEventListener('keydown', playSound);
+
+function selectInstrument(e){
+  const instrument = document.querySelector(`div[data-instrument="${INSTRUMENTS[e.path[0].innerText]}"]`);
+  selectedInstrument = instrument.dataset.instrument
+  console.log(instrument)
+  if(selectedInstrument === 'drumm'){
+
+  	
+  }
+
+  
+
+}
+
+const instruments = document.querySelectorAll(".instrument")
+instruments.forEach((instrument) => {
+	instrument.addEventListener("click", selectInstrument)
+})
