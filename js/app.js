@@ -1,3 +1,15 @@
+const instruments = document.querySelectorAll(".instrument")
+const keys = Array.from(document.querySelectorAll('.key'));
+
+// class TheInstruments  {
+//   constuctor(){
+//     this.name = 
+//     this.sound =
+//   }
+// }
+
+
+
 
 const KEY = {
   'A': 65,
@@ -46,28 +58,31 @@ function playSoundOnTouch(e) {
   audio.play();
 }
 
-const keys = Array.from(document.querySelectorAll('.key'));
+
+function selectInstrument(e){
+  const instrument = document.querySelector(`div[data-instrument="${INSTRUMENTS[e.path[0].innerText]}"]`);
+  selectedInstrument = instrument.dataset.instrument
+  console.log(instrument)
+  console.log(selectedInstrument)
+  if (selectedInstrument == "drumm"){
+  }
+  else if (selectedInstrument == "guitar") {
+  }
+  else if (selectedInstrument == "piano") {
+  }
+  else if (selectedInstrument == "bass") {
+  }
+  else if (selectedInstrument == "funny_sounds") {
+  }
+}
+
+instruments.forEach((instrument) => {
+	instrument.addEventListener("click", selectInstrument)
+})
+
 keys.forEach((key) => {
   key.addEventListener('transitionend', removeTransition);
   key.addEventListener('touchstart', playSoundOnTouch, false);
   key.addEventListener('click', playSoundOnTouch);
 });
 window.addEventListener('keydown', playSound);
-
-function selectInstrument(e){
-  const instrument = document.querySelector(`div[data-instrument="${INSTRUMENTS[e.path[0].innerText]}"]`);
-  selectedInstrument = instrument.dataset.instrument
-  console.log(instrument)
-  if(selectedInstrument === 'drumm'){
-
-  	
-  }
-
-  
-
-}
-
-const instruments = document.querySelectorAll(".instrument")
-instruments.forEach((instrument) => {
-	instrument.addEventListener("click", selectInstrument)
-})
