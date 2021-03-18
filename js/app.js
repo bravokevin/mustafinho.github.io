@@ -1,14 +1,16 @@
 const instruments = document.querySelectorAll(".instrument")
 const keys = Array.from(document.querySelectorAll('.key'));
 let selectedInstrument = ""
+var instrumentsText = Array.from(document.querySelectorAll(".sound"))
 
-class TheInstruments  {
-  constuctor(nombre){
-    this.name = nombre
-    this.audios = new Audio()
-    this.audios.src = audios[this.name]
-  }
-}
+var instrumentTextContent = instrumentsText.textContent
+
+var guitarTexts = ["c major", "d major", "e major", "f major", "g major", "a major", "b major"];
+
+var drummTexts = ["boom", "clap", "hihat", "kick", "openhat", "ride", "Snare", "tink", "tom"];
+
+var funnyTexts = ["air horn", "bong", "bonk", "negative sound", "pop up", "no", "yeiih"];
+
 
 var guitarAudios = [];
 guitarAudios["65"] = new Audio("../../sounds/guitar/cleanchord-Cm.wav");
@@ -69,20 +71,14 @@ function playSound(e) {
 
   if(selectedInstrument == "guitar"){
     const audio = guitarAudios[e.keyCode];
-    console.log("tis es te audio",audio)
-
     const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
     if (!audio) return;
     key.classList.add('playing');
     audio.currentTime = 0;
     audio.play();
-    setTimeout(()=>{
-      audio.pause();
-      audio.currentTime = 0;}, 4000)
     }
     else if(selectedInstrument == "funny_sounds"){
       const audio = funnyAudios[e.keyCode];
-      console.log("tis es te audio",audio)
       const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
       if (!audio) return;
       key.classList.add('playing');
@@ -92,7 +88,6 @@ function playSound(e) {
 
     else if(selectedInstrument == "drumm"){
       const audio = drummAudios[e.keyCode];
-      console.log("tis es te audio",audio)
       const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
       if (!audio) return;
       key.classList.add('playing');
@@ -118,14 +113,35 @@ function selectInstrument(e){
   const instrument = document.querySelector(`div[data-instrument="${INSTRUMENTS[e.path[0].innerText]}"]`);
   selectedInstrument = instrument.dataset.instrument
   if (selectedInstrument == "drumm"){
+    instrumentsText.forEach( e => {
+      for(i in drummTexts){
+        if (i == e.dataset.number) {
+          e.textContent = drummTexts[i]
+        }
+      }
+    })
   }
   else if (selectedInstrument == "guitar") {
+    instrumentsText.forEach( e => {
+      for(i in guitarTexts){
+        if (i == e.dataset.number) {
+          e.textContent = guitarTexts[i]
+        }
+      }
+    })
   }
   else if (selectedInstrument == "piano") {
   }
   else if (selectedInstrument == "bass") {
   }
   else if (selectedInstrument == "funny_sounds") {
+    instrumentsText.forEach( e => {
+      for(i in funnyTexts){
+        if (i == e.dataset.number) {
+          e.textContent = funnyTexts[i]
+        }
+      }
+    })
   }
 }
 
