@@ -113,19 +113,21 @@ function selectInstrument(e){
   const instrument = document.querySelector(`div[data-instrument="${INSTRUMENTS[e.path[0].innerText]}"]`);
   selectedInstrument = instrument.dataset.instrument
   if (selectedInstrument == "drumm"){
-    instrumentsText.forEach( e => {
-      for(i in drummTexts){
-        if (i == e.dataset.number) {
-          e.textContent = drummTexts[i]
+    drummTexts.forEach(e =>{
+      for(i in instrumentsText){
+        let name = instrumentsText[i]
+        if (i == name.dataset.number) {
+          name.textContent = drummTexts[i]
         }
       }
     })
   }
   else if (selectedInstrument == "guitar") {
-    instrumentsText.forEach( e => {
-      for(i in guitarTexts){
-        if (i == e.dataset.number) {
-          e.textContent = guitarTexts[i]
+    guitarTexts.forEach(e =>{
+      for(i in instrumentsText){
+        let name = instrumentsText[i]
+        if (i == name.dataset.number) {
+          name.textContent = guitarTexts[i]
         }
       }
     })
@@ -135,10 +137,11 @@ function selectInstrument(e){
   else if (selectedInstrument == "bass") {
   }
   else if (selectedInstrument == "funny_sounds") {
-    instrumentsText.forEach( e => {
-      for(i in funnyTexts){
-        if (i == e.dataset.number) {
-          e.textContent = funnyTexts[i]
+    funnyTexts.forEach(e =>{
+      for(i in instrumentsText){
+        let name = instrumentsText[i]
+        if (i == name.dataset.number) {
+          name.textContent = funnyTexts[i]
         }
       }
     })
