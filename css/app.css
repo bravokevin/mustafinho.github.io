@@ -211,7 +211,7 @@ h2{
 	background-size: cover;
 	background-position: center;
 }
-@media (max-width: 800px){
+@media (max-divice-width: 400px){
 	.instruments{
 		display: flex;
 		flex-direction: column;
