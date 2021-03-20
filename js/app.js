@@ -22,42 +22,42 @@ var funnyTexts = ["air horn", "bong", "bonk", "negative sound", "pop up", "no", 
 
 
 var guitarAudiosMajor = [];
-guitarAudiosMajor["65"] = new Audio("../../sounds/guitar/cleanchord-Cm.wav");
-guitarAudiosMajor["83"] = new Audio("../../sounds/guitar/cleanchord-D.wav");
-guitarAudiosMajor["68"] = new Audio("../../sounds/guitar/cleanchord-E.wav");
-guitarAudiosMajor["70"] = new Audio("../../sounds/guitar/cleanchord-F.wav");
-guitarAudiosMajor["71"] = new Audio("../../sounds/guitar/cleanchord-G.wav");
-guitarAudiosMajor["72"] = new Audio("../../sounds/guitar/cleanchord-A.wav");
-guitarAudiosMajor["74"] = new Audio("../../sounds/guitar/cleanchord-B.wav");
+guitarAudiosMajor["65"] = new Audio("../sounds/guitar/cleanchord-Cm.wav");
+guitarAudiosMajor["83"] = new Audio("../sounds/guitar/cleanchord-D.wav");
+guitarAudiosMajor["68"] = new Audio("../sounds/guitar/cleanchord-E.wav");
+guitarAudiosMajor["70"] = new Audio("../sounds/guitar/cleanchord-F.wav");
+guitarAudiosMajor["71"] = new Audio("../sounds/guitar/cleanchord-G.wav");
+guitarAudiosMajor["72"] = new Audio("../sounds/guitar/cleanchord-A.wav");
+guitarAudiosMajor["74"] = new Audio("../sounds/guitar/cleanchord-B.wav");
 
 var guitarAudiosMinor = [];
-guitarAudiosMinor["65"] = new Audio("../../sounds/guitar/cleanchord-Cm.wav");
-guitarAudiosMinor["83"] = new Audio("../../sounds/guitar/cleanchord-Dm.wav");
-guitarAudiosMinor["68"] = new Audio("../../sounds/guitar/cleanchord-Em.wav");
-guitarAudiosMinor["70"] = new Audio("../../sounds/guitar/cleanchord-Fm.wav");
-guitarAudiosMinor["71"] = new Audio("../../sounds/guitar/cleanchord-Gm.wav");
-guitarAudiosMinor["72"] = new Audio("../../sounds/guitar/cleanchord-Am.wav");
-guitarAudiosMinor["74"] = new Audio("../../sounds/guitar/cleanchord-Bm.wav");
+guitarAudiosMinor["65"] = new Audio("../sounds/guitar/cleanchord-Cm.wav");
+guitarAudiosMinor["83"] = new Audio("../sounds/guitar/cleanchord-Dm.wav");
+guitarAudiosMinor["68"] = new Audio("../sounds/guitar/cleanchord-Em.wav");
+guitarAudiosMinor["70"] = new Audio("../sounds/guitar/cleanchord-Fm.wav");
+guitarAudiosMinor["71"] = new Audio("../sounds/guitar/cleanchord-Gm.wav");
+guitarAudiosMinor["72"] = new Audio("../sounds/guitar/cleanchord-Am.wav");
+guitarAudiosMinor["74"] = new Audio("../sounds/guitar/cleanchord-Bm.wav");
 
 var funnyAudios = [];
-funnyAudios["65"] = new Audio("../../sounds/funny/Air-horn-noise.mp3");
-funnyAudios["83"] = new Audio("../../sounds/funny/Bong-sound-effect.mp3");
-funnyAudios["68"] = new Audio("../../sounds/funny/Bonk-sound-effect.mp3");
-funnyAudios["70"] = new Audio("../../sounds/funny/Negative-sound-effect.mp3");
-funnyAudios["71"] = new Audio("../../sounds/funny/Pop-up-sound-effect.mp3");
-funnyAudios["72"] = new Audio("../../sounds/funny/Saying-no-sound-effect.mp3");
-funnyAudios["74"] = new Audio("../../sounds/funny/Yeet-sound-effect.mp3");
+funnyAudios["65"] = new Audio("../sounds/funny/Air-horn-noise.mp3");
+funnyAudios["83"] = new Audio("../sounds/funny/Bong-sound-effect.mp3");
+funnyAudios["68"] = new Audio("../sounds/funny/Bonk-sound-effect.mp3");
+funnyAudios["70"] = new Audio("../sounds/funny/Negative-sound-effect.mp3");
+funnyAudios["71"] = new Audio("../sounds/funny/Pop-up-sound-effect.mp3");
+funnyAudios["72"] = new Audio("../sounds/funny/Saying-no-sound-effect.mp3");
+funnyAudios["74"] = new Audio("../sounds/funny/Yeet-sound-effect.mp3");
 
 var drummAudios = [];
-drummAudios["65"] = new Audio("../../sounds/battery/boom.wav");
-drummAudios["83"] = new Audio("../../sounds/battery/clap.wav");
-drummAudios["68"] = new Audio("../../sounds/battery/hihat.wav");
-drummAudios["70"] = new Audio("../../sounds/battery/kick.wav");
-drummAudios["71"] = new Audio("../../sounds/battery/openhat.wav");
-drummAudios["72"] = new Audio("../../sounds/battery/ride.wav");
-drummAudios["74"] = new Audio("../../sounds/battery/snare.wav");
-drummAudios["75"] = new Audio("../../sounds/battery/tink.wav");
-drummAudios["76"] = new Audio("../../sounds/battery/tom.wav");
+drummAudios["65"] = new Audio("../sounds/battery/boom.wav");
+drummAudios["83"] = new Audio("../sounds/battery/clap.wav");
+drummAudios["68"] = new Audio("../sounds/battery/hihat.wav");
+drummAudios["70"] = new Audio("../sounds/battery/kick.wav");
+drummAudios["71"] = new Audio("../sounds/battery/openhat.wav");
+drummAudios["72"] = new Audio("../sounds/battery/ride.wav");
+drummAudios["74"] = new Audio("../sounds/battery/snare.wav");
+drummAudios["75"] = new Audio("../sounds/battery/tink.wav");
+drummAudios["76"] = new Audio("../sounds/battery/tom.wav");
 
 const KEY = {
   'A': 65,
@@ -136,7 +136,8 @@ function playSoundOnTouch(e) {
       if (!audio) return;
       key.classList.add('playing');
       audio.currentTime = 0;
-      audio.play()
+      audio.play();
+
     }
     else if(selectedInstrument == "funny_sounds"){
       const audio = funnyAudios[KEY[e.path[0].innerText]];
