@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
-<link rel="icon" href="img/sound.png">
+<link rel="icon" href="img/music.png">
 </head>
 		
 <body>
@@ -19,7 +19,9 @@
 				<h1>Welcome to music kit</h1>
 			</div>
 		</div>
-
+		<div class="btnContainer">
+			<button class = "backBtn">Back</button>
+		</div>
 		<div class ="instrument_container">
 			<div class ="instruments_text">
 				<h2>Select your instrument</h2>
@@ -27,7 +29,7 @@
 			<div class="instruments">
 				<div class = "instrument" tabindex="0" role="button" data-instrument = "drumm">
 					<div class = "logo">
-	                	<img src="img/drumstick.png" alt="" >	
+	                	<img src="img/drumstick2.png" alt="" >	
 					</div>
 					<div class = "subtitle">
 						<span>Drumm</span>
@@ -35,7 +37,7 @@
 				</div>
 				<div class = "instrument" tabindex="0" role="button" data-instrument = "guitar">
 					<div class = "logo">
-	                	<img src="img/guitar.png" alt="">	
+	                	<img src="img/electric-guitar.png">	
 					</div>
 					<div class = "subtitle">
 						<span>Guitar</span>
@@ -43,7 +45,7 @@
 				</div>
 				<div class = "instrument" tabindex="0" role="button" data-instrument = "piano">
 					<div class = "logo">
-	                	<img src="img/piano.png" alt="">	
+	                	<img src="img/piano2.png" alt="">	
 					</div>
 					<div class = "subtitle">
 						<span>Piano</span>
@@ -51,7 +53,7 @@
 				</div>
 				<div class = "instrument" tabindex="0" role="button" data-instrument = "bass">
 				<div class = "logo">
-	                	<img src="img/bass-guitar.png" alt="">	
+	                	<img src="img/bass-guitar.png" style="width: 36px;" alt="">	
 				</div>
 					<div class = "subtitle">
 						<span>Bass</span>
@@ -59,7 +61,7 @@
 				</div>
 				<div class = "instrument" tabindex="0" role="button" data-instrument = "funny_sounds">
 					<div class = "logo">
-	                	<img src="img/humor.png" style="width: 35px" alt="">	
+	                	<img src="img/glasses.png" alt="" style="width: 32px;">	
 					</div>
 					<div class = "subtitle">
 						<span>Funny Sounds</span>
@@ -69,7 +71,7 @@
 		</div>
 
 		<div class ="keys_container">
-		<h2>Press one of those keys</h2>
+		<h2 class ="h2">Press one of those keys</h2>
 		<div class="keys">
 				<div data-key = "65" class ="key">
 					<kbd>A</kbd>
@@ -97,7 +99,7 @@
 				</div>
 				<div data-key = "74" class ="key">
 					<kbd>J</kbd>
-					<span class="sound" data-number = "6"></span>
+					<span class="sound" data-number = "6"> </span>
 				</div>
 				<div data-key = "75" class ="key">
 					<kbd>K</kbd>
@@ -109,8 +111,9 @@
 				</div>		
 			</div>
 		</div>
-
-
+	</div>
+	<div class="notFound">
+		<p>Hey Sorry, but I didn't found yet the samples for that instrument. You can try the others :D</p>
 	</div>
 	<script type="text/javascript" src="js/app.js"></script>
 </body>
